@@ -1,0 +1,76 @@
+\documentclass[11pt]{article}
+
+	\title{AM215_Pset2_CLARK TEEPLE}
+
+%Set up document format
+    \usepackage[margin=1in]{geometry}
+    \usepackage[english]{babel}
+    \usepackage{enumitem}	%Make nice looking lists
+    \usepackage{color}		%Allow different font colors
+    \usepackage{changepage} %Allow Changing the margins in the middle of the page
+    \usepackage{subcaption} 
+      \usepackage{setspace}							% single-spaced
+     \singlespacing
+  
+  % Nice-Looking Header & Footer
+  \usepackage{lastpage}
+  \usepackage{fancyhdr}
+  	\pagestyle{fancy}
+	\fancyhf{}
+	\lhead{AM 215 - Homework 2}
+	\rhead{Clark Teeple}
+    \lfoot{\includegraphics[height=1cm]{figs/LooseleafLogo.png}}
+	\rfoot{\thepage\ of \pageref{LastPage}}
+  
+    %Skip lines after paragraphs instead of indenting
+		\usepackage{parskip}
+
+
+
+    %Set up caption settings
+        \usepackage{float}
+        \usepackage[margin=3 cm]{caption}
+        \usepackage[font=small]{caption}
+
+
+%Set Up graphics and math 
+    \usepackage{graphicx}
+	\usepackage{amsmath,amsthm,amssymb,mathtools}
+    \usepackage{empheq}
+    \usepackage{mathrsfs}  
+    
+    %Make a custom command for making vectors bold
+    	\newcommand{\matr}[1]{\mathbf{#1}}
+
+
+%Make the Table of contents into hyperlinks
+    \usepackage{hyperref}
+    \hypersetup{
+        colorlinks,
+        citecolor=black,
+        filecolor=black,
+        linkcolor=blue,
+        urlcolor=blue
+	}
+
+
+%Define Number of Problems
+\newcommand*{\MaxNumOfProblems}{10}
+\usepackage{pgffor} 
+   
+    
+    
+\begin{document}
+
+\textbf{Note: I worked with Emma Steinhardt and Julia Ebert}
+
+%Include all the problems in their corresponding sections
+\foreach \p in {1,2,...,\MaxNumOfProblems}{
+        \IfFileExists{tex/problem\p} {
+        	\section*{Problem \p:}
+            \input{tex/problem\p}
+            \newpage
+        }
+}
+
+\end{document}
