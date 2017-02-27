@@ -1,5 +1,5 @@
 function f=GenData(N)
-%%
+%% This function generates data for Problem 1a
 K_true=10;
 
 a = -5;
