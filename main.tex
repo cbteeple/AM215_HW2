@@ -61,12 +61,6 @@
 \usepackage{pgffor} 
    
    
-   
-\def\inputAllFiles#1{%
-  \app@exe{ls #1/*.txt | xargs cat >> \jobname.tmp}%
-  \InputIfFileExists{\jobname.tmp}{}
-  \AtEndDocument{\app@exe{rm -f #1/\jobname.tmp}}}   
-   
     
     
 \begin{document}
@@ -82,9 +76,10 @@
         }
 }
 
-
+%Include all MATLAB Code
 \section*{Appendix A: MATLAB Code}
 \lstinputlisting{m/P1/GenData.m}
+
 
 
 \end{document}
