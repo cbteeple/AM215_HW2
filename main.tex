@@ -38,6 +38,8 @@
 	\usepackage{amsmath,amsthm,amssymb,mathtools}
     \usepackage{empheq}
     \usepackage{mathrsfs}  
+    % load package with ``framed'' and ``numbered'' option.
+    	\usepackage[framed,numbered,autolinebreaks,useliterate]{mcode}
     
     %Make a custom command for making vectors bold
     	\newcommand{\matr}[1]{\mathbf{#1}}
@@ -72,5 +74,10 @@
             \newpage
         }
 }
+
+
+\section*{Appendix A: MATLAB Code}
+\lstinputlisting{m/GenData.m}
+
 
 \end{document}
